@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+ fecha=$(date +"%d%b%Y-%H%M%S")
+ archivo="$1"
+ dir=/home/vanessa/dirempaquetados/
+ test -f "$1" || { echo "se esperaba como primer parametro un archivo"; exit 1 ; }
+  tar -cvf /$dir/$archivo-$fecha.tar $archivo
